@@ -1,0 +1,36 @@
+module.exports = function(app) {
+
+var Video = require ("../ejemplo/lanzamientovideojuegos.js");
+
+
+
+// Busca todos los lanzamientos
+findAllVideo = function(req, res) {
+          Video.find(function(err, routes) {
+          if (!err) {
+             res.send(lanzamientosvideojuego);
+             } else {
+                    console.log("ERROR: " + err);
+                    }
+ }),
+};
+} 
+
+// Busca un lanzamiento especifico
+ findById = function (req, res) {
+      Video.findById(req.param.id, function(err, lanzamientovideojuegos) {
+          if(!err) {
+           res.send(lanzamientovideojuegos);
+           } else {
+              console.log("ERROR: " + error);
+           }
+});
+};
+
+// Añade un nuevo lanzamiento
+
+addVideo = function (req, res) {
+       console.log("POST");
+       console.log(req, body);
+
+var 
